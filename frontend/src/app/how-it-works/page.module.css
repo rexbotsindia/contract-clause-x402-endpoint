@@ -1,0 +1,454 @@
+.page { display: flex; flex-direction: column; min-height: calc(100vh - 56px); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HERO - white card, centred
+═══════════════════════════════════════════════════════════════════════════ */
+.hero {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 3.5rem 2rem 2.75rem;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    background: var(--primary-subtle);
+    border: 1px solid rgba(13,148,136,.2);
+    border-radius: var(--radius-pill);
+    padding: 0.2rem 0.7rem;
+    margin-bottom: 1.1rem;
+}
+
+.heroTitle {
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 0.85rem;
+}
+
+.heroSub {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+/* ── Shared section label ───────────────────────────────────────────────── */
+.sectionLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.sectionLabelLight { color: rgba(255,255,255,.45); }
+
+.sectionLabelNum {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px; height: 22px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 800;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.sectionLabelLight .sectionLabelNum {
+    background: rgba(255,255,255,.15);
+    color: white;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 01 - Payment Flow (warm off-white, horizontal timeline)
+═══════════════════════════════════════════════════════════════════════════ */
+.flowSection {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 3.5rem;
+}
+
+.flowInner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Horizontal timeline */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    position: relative;
+}
+
+@media (max-width: 860px) {
+    .timeline { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .timelineConnector { display: none; }
+}
+@media (max-width: 500px) {
+    .timeline { grid-template-columns: 1fr; }
+}
+
+.timelineItem {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+.timelineTop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.timelineIconWrap {
+    width: 48px; height: 48px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--primary-dark);
+    box-shadow: var(--shadow-xs);
+}
+
+.timelineConnector {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0 0.5rem;
+    min-width: 0;
+}
+
+.timelineConnectorLine {
+    flex: 1;
+    height: 1.5px;
+    background: var(--border-mid);
+}
+
+.timelineArrow { color: var(--border-strong); flex-shrink: 0; }
+
+.timelineBody { padding-right: 1.25rem; }
+
+.timelineNum {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.timelineTitle {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 750;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+}
+
+.timelineText {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 02 - Architecture (dark background, node flow)
+═══════════════════════════════════════════════════════════════════════════ */
+.archSection {
+    background: #1a1a1a;
+    border-bottom: 1px solid #2e2e2e;
+    padding: 3rem 2rem 3.5rem;
+}
+
+.archInner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.archFlow {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0;
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    .archFlow { flex-wrap: wrap; gap: 0.75rem; }
+    .archConnector { display: none; }
+}
+
+.archItem {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.archNode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    text-align: center;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: var(--radius);
+    padding: 1.1rem 1rem;
+    min-width: 115px;
+    transition: background 0.15s, border-color 0.15s;
+}
+.archNode:hover {
+    background: rgba(255,255,255,.09);
+    border-color: rgba(13,148,136,.4);
+}
+
+.archNodeIcon {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(13,148,136,.15);
+    border: 1px solid rgba(13,148,136,.3);
+    border-radius: var(--radius-sm);
+    color: #5eead4;
+    margin-bottom: 0.25rem;
+}
+
+.archNodeLabel {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+.archNodeSub {
+    font-size: 0.62rem;
+    color: rgba(255,255,255,.4);
+}
+
+.archNodeNote {
+    font-size: 0.6rem;
+    color: rgba(13,148,136,.8);
+    margin-top: 0.1rem;
+    font-style: italic;
+}
+
+.archConnector {
+    display: flex;
+    align-items: center;
+    padding: 0 0.35rem;
+    flex-shrink: 0;
+}
+
+.archConnectorLine {
+    width: 24px;
+    height: 1px;
+    background: rgba(255,255,255,.15);
+}
+
+.archConnectorArrow { color: rgba(255,255,255,.25); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 03 - Tech Stack (tinted bg, three-column grouped tables)
+═══════════════════════════════════════════════════════════════════════════ */
+.techSection {
+    background: var(--bg-inset);
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 3.5rem;
+}
+
+.techInner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.techGroups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 720px) { .techGroups { grid-template-columns: 1fr; } }
+
+.techGroup {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-xs);
+}
+
+.techGroupHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    background: var(--primary-subtle);
+    border-bottom: 1px solid rgba(13,148,136,.15);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-dark);
+}
+
+.techGroupIcon { color: var(--primary); }
+
+.techTable { width: 100%; border-collapse: collapse; }
+
+.techRow { border-bottom: 1px solid var(--border); }
+.techRow:last-child { border-bottom: none; }
+.techRow:hover td { background: var(--bg-inset); }
+
+.techLayer {
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-faint);
+    width: 38%;
+    white-space: nowrap;
+    border-right: 1px solid var(--border);
+}
+
+.techTech {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 04 - FAQ (white bg, 2-col card grid)
+═══════════════════════════════════════════════════════════════════════════ */
+.faqSection {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 3.5rem;
+}
+
+.faqInner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+@media (max-width: 640px) { .faqGrid { grid-template-columns: 1fr; } }
+
+.faqCard {
+    background: var(--bg-card);
+    padding: 1.4rem 1.5rem;
+    transition: background 0.15s;
+}
+.faqCard:hover { background: var(--bg-inset); }
+
+.faqQ {
+    font-size: 0.875rem;
+    font-weight: 750;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.faqQ::before {
+    content: 'Q';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px; height: 18px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.58rem;
+    font-weight: 800;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.faqA {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 1.5rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CTA - full-width teal band
+═══════════════════════════════════════════════════════════════════════════ */
+.ctaSection {
+    background: var(--primary);
+    padding: 2.5rem 2rem;
+}
+
+.ctaInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.ctaLeft { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+
+.ctaIcon { color: rgba(255,255,255,.7); flex-shrink: 0; }
+
+.ctaTitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.ctaSub {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,.7);
+    margin-top: 0.15rem;
+}
+
+.ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 0.875rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: background 0.15s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.ctaBtn:hover { background: var(--bg-inset); transform: translateY(-1px); color: var(--primary-dark); }
