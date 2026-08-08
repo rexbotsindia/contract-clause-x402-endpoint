@@ -102,7 +102,7 @@ export async function POST(req: NextRequest) {
     // Call the backend - x402 middleware handles 402 → pay → retry transparently
     let backendResponse: Response;
     try {
-        backendResponse = await fetchWithPayment(`${backendUrl}/analyze`, {
+        backendResponse = await fetchWithPayment(`${backendUrl}/scan`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ contract: contractPayload }),
