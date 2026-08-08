@@ -1,0 +1,27 @@
+{
+  "name": "x402-contract-risk-analyzer-frontend",
+  "version": "1.0.0",
+  "description": "Next.js demo frontend for x402 Resume Scorer",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001"
+  },
+  "dependencies": {
+    "@algorandfoundation/algokit-utils": "^10.0.0-alpha.42",
+    "@x402/avm": "^2.11.0",
+    "@x402/core": "^2.11.0",
+    "@x402/fetch": "^2.11.0",
+    "lucide-react": "^1.28.0",
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,96 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ── Backgrounds - warm paper tones ──────────────────────────────────── */
+  --bg:            #f8f7f4;
+  --bg-surface:    #f1efe9;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #fafaf8;
+  --bg-inset:      #f4f3ef;
+
+  /* ── Borders ─────────────────────────────────────────────────────────── */
+  --border:        #e2e0d8;
+  --border-mid:    #cccac0;
+  --border-strong: #b5b3a8;
+
+  /* ── Brand - deep teal ───────────────────────────────────────────────── */
+  --primary:       #0d9488;
+  --primary-light: #14b8a6;
+  --primary-dark:  #0f766e;
+  --primary-subtle:#f0fdfa;
+  --primary-glow:  rgba(13, 148, 136, 0.12);
+
+  /* ── Severity palette ────────────────────────────────────────────────── */
+  --sev-critical:        #dc2626;
+  --sev-critical-bg:     #fef2f2;
+  --sev-critical-border: #fecaca;
+
+  --sev-high:        #ea580c;
+  --sev-high-bg:     #fff7ed;
+  --sev-high-border: #fed7aa;
+
+  --sev-medium:        #ca8a04;
+  --sev-medium-bg:     #fefce8;
+  --sev-medium-border: #fef08a;
+
+  --sev-low:        #16a34a;
+  --sev-low-bg:     #f0fdf4;
+  --sev-low-border: #bbf7d0;
+
+  /* ── Semantic ─────────────────────────────────────────────────────────── */
+  --success:        #16a34a;
+  --success-bg:     #f0fdf4;
+  --success-border: #bbf7d0;
+
+  --danger:         #dc2626;
+  --danger-bg:      #fef2f2;
+  --danger-border:  #fecaca;
+
+  /* ── Text - dark slate ───────────────────────────────────────────────── */
+  --text:         #1c1917;
+  --text-muted:   #57534e;
+  --text-faint:   #a8a29e;
+  --text-inverse: #fafaf9;
+
+  /* ── Radii ────────────────────────────────────────────────────────────── */
+  --radius:       6px;
+  --radius-sm:    4px;
+  --radius-xs:    3px;
+  --radius-pill:  999px;
+
+  /* ── Font ─────────────────────────────────────────────────────────────── */
+  --font:      'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* ── Shadows ──────────────────────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.08), 0 0 0 1px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08), 0 0 0 1px rgba(0,0,0,.04);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--primary-dark); text-decoration: none; transition: color .15s; }
+a:hover { color: var(--primary); }
+
+::selection { background: rgba(13, 148, 136, 0.15); color: var(--text); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
