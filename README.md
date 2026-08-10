@@ -2,7 +2,7 @@
 
 <br />
 
-# ContractRisk AI
+# ContractLens AI
 
 ### AI-Powered Contract Risk Analyzer — Protected by x402 on Algorand
 
@@ -27,7 +27,7 @@
 
 ## What Is This?
 
-ContractRisk AI is a **pay-per-use AI API** that demonstrates how the [x402 payment protocol](https://x402.org) can monetize any HTTP endpoint without a traditional payment processor.
+ContractLens AI is a **pay-per-use AI API** that demonstrates how the [x402 payment protocol](https://x402.org) can monetize any HTTP endpoint without a traditional payment processor.
 
 Every call to `POST /analyze` triggers a full x402 payment handshake:
 
